@@ -27,3 +27,15 @@ where date(p.payment_date) = '2005-07-30' and p.payment_date = r.rental_date and
 ![Задание2](https://github.com/SSitkarev/12-05/blob/main/img/2.jpg)
 
 Видим, что запрос теперь обрабатывается 0,015, вместо 4,391 секунд.
+
+### Доработка:
+
+Создал индекс на payment_date
+
+![Задание2](https://github.com/SSitkarev/12-05/blob/main/img/2_1.jpg)
+
+Переписал запрос с использованием group by
+
+![Задание2](https://github.com/SSitkarev/12-05/blob/main/img/2_2.jpg)
+
+Судить об ощутимом приросте сложно, возможно, на более слабом железе получим лучший результат с такой доработкой.
